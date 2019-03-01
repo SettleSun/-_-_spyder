@@ -9,7 +9,7 @@ import pdb
 import re
 import threading
  
-      
+## 创建文件夹 保存爬的链接 保存数据      
 IMG_DIR = "bigen_info"
 if not os.path.exists(IMG_DIR):
     os.mkdir(IMG_DIR)
@@ -27,7 +27,7 @@ def get_html_txt(url,id_view):
     r.encoding = 'utf-8'
     soup = bs(r.text,'html.parser')
     #pdb.set_trace()
-       # 第一种 解决办法：class值取其中之一
+       # 当有多个class值时 解决办法：class值取其中之一
        ###   主题
     theme = soup.select('.main-content .lemmaWgt-lemmaTitle-title h1')[0].string# title 
     #if id_view % 20 == 0:print(url, " { |||||||||||| } ", theme)    
