@@ -8,7 +8,8 @@ chrome_options.add_argument('--headless') #增加无界面选项
 chrome_options.add_argument('--disable-gpu') #如果不加这个选项，有时定位会出现问题
 
 # 启动浏览器，获取网页源代码
-browser = webdriver.Chrome(chrome_options=chrome_options)
+browser = webdriver.Chrome(executable_path=r'D:\Program Files (x86)\chromedriver.exe', chrome_options=chrome_options)
+
 noAns = 0
 def getAns(Q):
     global noAns
